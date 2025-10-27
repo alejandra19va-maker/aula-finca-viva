@@ -1,0 +1,35 @@
+body {
+    font-family: 'Comic Sans MS', cursive;
+    background-color: #e8f5e9;
+    color: #2e7d32;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+header {
+    background-color: #81c784;
+    padding: 1em;
+}
+button {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #388e3c;
+}
+.contenido {
+    margin: 20px;
+}
+.oculto {
+    display: none;
+}
+footer {
+    margin-top: 30px;
+    font-size: 0.9em;
+    color: #558b2f;
+}

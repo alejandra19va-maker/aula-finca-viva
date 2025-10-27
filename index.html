@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juan Miguel - Aprendiendo de mi mejor maestra, la madre tierra</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>🌿 Juan Miguel 🌻</h1>
+        <h2>Aprendiendo de mi mejor maestra, la madre tierra</h2>
+    </header>
+
+    <main>
+        <section id="menu">
+            <button onclick="mostrarSeccion('cuentos')">📖 Cuentos</button>
+            <button onclick="mostrarSeccion('naturaleza')">🌳 Naturaleza</button>
+            <button onclick="mostrarSeccion('juegos')">🧩 Juegos</button>
+        </section>
+
+        <section id="cuentos" class="contenido oculto">
+            <h3>Cuentos para escuchar</h3>
+            <p>Selecciona un cuento y haz clic en “Escuchar”.</p>
+            <select id="seleccionCuento">
+                <option value="El nacimiento del río">El nacimiento del río</option>
+                <option value="El árbol que soñaba volar">El árbol que soñaba volar</option>
+                <option value="La cabrita curiosa">La cabrita curiosa</option>
+                <option value="El mini pig y la lluvia mágica">El mini pig y la lluvia mágica</option>
+            </select>
+            <button onclick="leerCuento()">🔊 Escuchar cuento</button>
+            <p id="textoCuento"></p>
+        </section>
+
+        <section id="naturaleza" class="contenido oculto">
+            <h3>Explorando la naturaleza 🌎</h3>
+            <ul>
+                <li>Observa cómo crecen tus plantas y dibújalas cada semana.</li>
+                <li>Investiga qué árboles hay en tu finca y cuántos animales viven cerca.</li>
+                <li>Toma una muestra de suelo y describe su color, textura y olor.</li>
+                <li>Anota cuándo llueve y cómo cambia el paisaje después.</li>
+            </ul>
+        </section>
+
+        <section id="juegos" class="contenido oculto">
+            <h3>Juegos de agilidad mental 🧠</h3>
+            <button onclick="juegoMatematico()">🎲 Jugar</button>
+            <p id="resultadoJuego"></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>Hecho con amor para Juan Miguel 💚</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
