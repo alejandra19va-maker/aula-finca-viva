@@ -1,31 +1,77 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Aula Finca Viva</title>
-  <link rel="stylesheet" href="estilos.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Aula Finca Viva — Aprendiendo de mi mejor maestra, la madre tierra</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <div class="contenedor">
-    <h1>🌿 Hola hijo</h1>
-    <h2>Bienvenido a tu Aula Finca Viva</h2>
-    <button id="comenzar">Comenzar la aventura</button>
-    <p class="mensaje">Sonido ambiental activado 🌳</p>
-    <audio id="sonidoAmbiente" autoplay loop>
-      <source src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_6dc2b38c45.mp3?filename=forest-birds-chirping-ambient-nature-sounds-17767.mp3" type="audio/mpeg">
-    </audio>
-  </div>
+  <header class="site-header">
+    <div class="brand">
+      <div class="logo" id="logo-anim" aria-hidden="true">
+        <!-- Hoja SVG -->
+        <svg width="48" height="48" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+          <path d="M20 34 C26 20, 44 18, 44 28 C44 36, 30 46, 20 34" fill="#66bb6a"/>
+        </svg>
+      </div>
+      <div class="titles">
+        <h1>Aula Finca Viva</h1>
+        <p class="subtitle">Aprendiendo de mi mejor maestra, la madre tierra — Juan Miguel</p>
+      </div>
+    </div>
+    <div class="profile">Alumno: <strong id="profile-name">Juan Miguel</strong></div>
+  </header>
 
-  <div id="aventura" class="oculto">
-    <h2>Primera Lección: Explorando la huerta 🌱</h2>
-    <p>Hoy aprenderás a observar cómo crecen las plantas. Busca una semilla, siémbrala y escribe lo que observes cada día.</p>
-    <p>🎧 Escucha los sonidos de la naturaleza mientras aprendes.</p>
-    <button id="cuento">Escuchar un cuento del bosque 🍃</button>
-    <audio id="cuentoAudio">
-      <source src="https://cdn.pixabay.com/download/audio/2023/02/10/audio_bcf3b2f906.mp3?filename=forest-story-intro-139013.mp3" type="audio/mpeg">
-    </audio>
-  </div>
+  <main id="main">
+    <!-- Bienvenida -->
+    <section id="welcome" class="welcome">
+      <div class="scene" aria-hidden="true">
+        <div class="mountains"></div>
+      </div>
+      <h2 id="welcome-text">Hola hijo 🌞</h2>
+      <button id="start-btn" class="start wood">🌿 Comenzar la aventura</button>
+      <div class="controls"><label><input type="checkbox" id="sound-toggle" checked> Sonido ambiental</label></div>
+      <div id="daily-msg" class="daily-msg" aria-live="polite"></div>
+    </section>
+
+    <!-- Navegación -->
+    <nav id="nav" class="main-nav" aria-label="Navegación" style="display:none;">
+      <button data-section="cuentos" class="nav-btn">📖 Cuentos</button>
+      <button data-section="huerta" class="nav-btn">🌱 Huerta</button>
+      <button data-section="animales" class="nav-btn">🐐 Animales</button>
+      <button data-section="ciencia" class="nav-btn">🔬 Ciencia</button>
+      <button data-section="juegos" class="nav-btn">🧠 Juegos</button>
+      <button data-section="progreso" class="nav-btn">📊 Progreso</button>
+      <button data-section="madre" class="nav-btn">👩‍🌾 Madre</button>
+    </nav>
+
+    <!-- Contenidos -->
+    <section id="content" style="display:none;">
+      <div id="cuentos" class="section"></div>
+      <div id="huerta" class="section"></div>
+      <div id="animales" class="section"></div>
+      <div id="ciencia" class="section"></div>
+      <div id="juegos" class="section"></div>
+      <div id="progreso" class="section" aria-live="polite"></div>
+
+      <div id="madre" class="section">
+        <h3>Zona Madre</h3>
+        <p>Ingrese la contraseña para ver el panel de mamá:</p>
+        <input id="mother-pass" type="password" placeholder="Contraseña" />
+        <button id="mother-login">Entrar</button>
+        <div id="mother-panel" style="display:none">
+          <h4>Progreso</h4>
+          <div id="progress-area"></div>
+          <h4>Mensajes diarios (editar)</h4>
+          <textarea id="mother-messages" rows="6" style="width:100%"></textarea>
+          <button id="save-messages">Guardar mensajes</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">Hecho con ❤ en la finquita — Aula Finca Viva</footer>
 
   <script src="app.js"></script>
 </body>
